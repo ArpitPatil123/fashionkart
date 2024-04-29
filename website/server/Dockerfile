@@ -1,0 +1,12 @@
+FROM node:latest
+WORKDIR /app
+COPY package.json /app
+RUN npm install
+COPY . .
+ENV TOKEN_SECRET=2Z3SeD5FYpJ7ARSrjRrgyleAxmUDWLPUkCftQp
+ENV DB_USERNAME=StealthMode
+ENV DB_PASSWORD=ehfjZVeARoqO3Elb
+ENV SQL_USERNAME=Vg78gNf4YfHZ5u7UnpB4uoNMOnxIcGwBXVONovh05jY
+ENV SQL_PASSWORD=eY84lngOvBc54Wm3/SLLcbNv6WtLK0k64tNf7wvmQks=
+EXPOSE 8000
+CMD ["npm", "run", "start"]
